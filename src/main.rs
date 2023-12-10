@@ -1,3 +1,1 @@
-fn main() {
-    let arg
-}
+fn main() {}
