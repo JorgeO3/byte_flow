@@ -29,17 +29,22 @@ pub struct BitTorrentMessage {
 impl BitTorrentMessageMethods for BitTorrentMessage {
     fn new(id: u8, payload: String) -> Self {
         let message_length = payload.len() as u32 + 1;
-        Self { id, payload, message_length }
+        Self {
+            id,
+            payload,
+            message_length,
+        }
     }
 
     fn to_string(&self) -> String {
         // this function transforms into big_endian assuming
         // that locally it is in little_endian
         // TODO: Corroborar que el formato que se maneja localmente sea little endian
-        format!("{}{:02X?}{}",
-                self.id,
-                self.message_length.to_be_bytes(),
-                self.payload
+        format!(
+            "{}{:02X?}{}",
+            self.id,
+            self.message_length.to_be_bytes(),
+            self.payload
         )
     }
 

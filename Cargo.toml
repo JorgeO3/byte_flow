@@ -10,3 +10,9 @@ name = "client"
 path = "src/main.rs"
 
 [dependencies]
+anyhow = "1.0.79"
+clap = { version = "4.4.13", features = ["derive"] }
+env_logger = "0.10.1"
+log = "0.4.20"
+log4rs = "1.2.0"
+thiserror = "1.0.56"

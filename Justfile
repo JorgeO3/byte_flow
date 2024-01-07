@@ -7,7 +7,4 @@ lint:
   cargo clippy
 
 bin:
-  cargo run --bin client -- arg1
-
-example:
-  cargo run --example exname -- arg1
+  cargo run -- -t "Hello, World!" -o hello_world.png -l

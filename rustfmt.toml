@@ -13,10 +13,10 @@ edition = "2021"
 max_width = 100
 
 array_width = 60
-attr_fn_like_width = 70
+attr_fn_like_width = 170
 chain_width = 60
 comment_width = 80
-fn_call_width = 60
+fn_call_width = 90
 single_line_if_else_max_width = 50
 struct_lit_width = 18
 struct_variant_width = 35
@@ -72,7 +72,6 @@ use_field_init_shorthand = true
 use_try_shorthand = true
 where_single_line = true
 wrap_comments = true
-
 ####################################################################################################
 ############################ Settings related to rustfmt error handling ############################
 ####################################################################################################
